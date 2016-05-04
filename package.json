@@ -1,0 +1,56 @@
+{
+  "name": "gulp-fritz",
+  "description": "Frismedia specific gulp helper",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frismedia/gulp-fritz.git"
+  },
+  "author": {
+    "name": "Frismedia",
+    "email": "info@frismedia.nl",
+    "url": "http://frismedia.nl/"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "fritz"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-shell": "^0.5.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-uncss": "^1.0.5",
+    "gulp-util": "^3.0.7",
+    "gulp.spritesmith": "^6.2.0",
+    "imagemin-pngquant": "^4.2.2",
+    "laravel-elixir": "*",
+    "spritesmith": "^3.1.0",
+    "underscore": "^1.8.3",
+    "yargs": "^4.3.2",
+    "critical": "^0.7.1",
+    "dploy": "^1.2.0",
+    "foundation-apps": "^1.1.0"
+  },
+  "scripts": {
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "license": "MIT",
+  "gitHead": "48e757a90687a8c5bca9d2945285ac0689aa7023",
+  "homepage": "https://github.com/frismedia/gulp-fritz#readme",
+  "directories": {},
+  "readme": "ERROR: No README data found!"
+}
