@@ -5,7 +5,7 @@ var shell = require('gulp-shell');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
-var cleanCSS = require('gulp-clean-css'); 
+var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var argv = require('yargs').argv;
@@ -116,9 +116,9 @@ module.exports = function(config) {
             var tasks = argv.task.split(','),
                 files = [];
             for (var i = 0; i < tasks.length; i++) {
-                files = items[tasks[i]].files;
-                if ('undefined' !== typeof items[tasks[i]].watch) {
-                    files = files.concat(items[tasks[i]].watch);
+                files = config[tasks[i]].files;
+                if ('undefined' !== typeof config[tasks[i]].watch) {
+                    files = files.concat(config[tasks[i]].watch);
                 }
                 gulp.watch(files, [tasks[i]]);
                 gulp.start(tasks[i]);
