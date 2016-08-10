@@ -125,4 +125,19 @@ module.exports = function(config) {
             }
         }
     });
+    
+     gulp.task('default', function() {
+        var files = [];
+        for (var i = 0; i < tasks.length; i++) {
+            files = config[tasks[i]].files;
+            if ('undefined' !== typeof config[tasks[i]].watch) {
+                files = files.concat(config[tasks[i]].watch);
+            }
+            if (argv.watch) {
+                gulp.watch(files, [tasks[i]]);
+            }
+            gulp.start(tasks[i]);
+        }
+    });
+    
 };
