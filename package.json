@@ -1,7 +1,7 @@
 {
   "name": "gulp-fritz",
   "description": "Frismedia specific gulp helper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frismedia/gulp-fritz.git"
@@ -18,8 +18,6 @@
     "fritz"
   ],
   "dependencies": {
-  },
-  "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-clean-css": "^2.0.4",
     "gulp-concat": "^2.6.0",
@@ -42,6 +40,9 @@
     "critical": "^0.7.1",
     "dploy": "^1.2.0",
     "foundation-apps": "^1.1.0"
+  },
+  "devDependencies": {
+    
   },
   "scripts": {
   },
