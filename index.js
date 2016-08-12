@@ -21,7 +21,9 @@ var pngquant = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
 // when a string it will construct a new one
 module.exports = function(config) {
 
+    var tasks = [];
     _.each(config, function(value, key) {
+        tasks.push(key);
         gulp.task(key, function() {
 
             // Sprite css-files are automatically appended to the app's css file
