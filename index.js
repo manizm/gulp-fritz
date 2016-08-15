@@ -46,15 +46,13 @@ module.exports = function(config) {
             var task = gulp.src(files);
             if ('imagemin' === value.type) {
 
-
-                if ('imagemin' === value.type) {
-                    gulp.src(value.files)
-                        .pipe(imagemin({
-                            progressive: true,
-                            use: [pngquant()]
-                        }))
-                        .pipe(gulp.dest(value.dest));
-                }
+                gulp.src(value.files)
+                    .pipe(imagemin({
+                        progressive: true,
+                        use: [pngquant()]
+                    }))
+                    .pipe(gulp.dest(value.dest));
+                    
             }
             else if ('scripts' === value.type) {
 
