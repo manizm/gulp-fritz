@@ -89,12 +89,12 @@ module.exports = function(config) {
 
                 task = task.pipe(gulp.dest(value.dest));
 
-                if ('undefined' !== typeof value.copy) {
-                    _.each(value.copy, function(path, name) {
-                        gulp.src([path]).pipe(gulp.dest(value.dest));
-                    });
-                }
-
+            }
+            
+            if ('undefined' !== typeof value.copy) {
+                _.each(value.copy, function(path, name) {
+                    gulp.src([path]).pipe(gulp.dest(value.dest));
+                });
             }
 
             if (argv.watch) {
