@@ -27,7 +27,8 @@ module.exports = function(config) {
         gulp.task(key, function() {
 
             // Sprite css-files are automatically appended to the app's css file
-            var files = value.files;
+            var files = value.files,
+                filename = (value.filename ? value.filename : 'app');
 
             if ('sass' === value.type) {
                 if ('undefined' !== typeof value.images) {
@@ -58,11 +59,11 @@ module.exports = function(config) {
 
                 if (argv.production) {
                     gutil.log('minifying scripts for production.. This could take a while');
-                    task = task.pipe(concat('app.min.js'));
+                    task = task.pipe(concat(filename+'.min.js'));
                     task = task.pipe(uglify());
                 }
                 else {
-                    task = task.pipe(concat('app.js'));
+                    task = task.pipe(concat(filename+'.js'));
                 }
 
                 task = task.pipe(gulp.dest(value.dest));
@@ -78,12 +79,12 @@ module.exports = function(config) {
 
                 if (argv.production) {
                     gutil.log('minifying styles for production');
-                    task = task.pipe(concat('app.min.css'));
+                    task = task.pipe(concat(filename+'.min.css'));
                     task = task.pipe(cleanCSS());
                     task = task.pipe(sourcemaps.write('/'));
                 }
                 else {
-                    task = task.pipe(concat('app.css'));
+                    task = task.pipe(concat(filename+'.css'));
                     task = task.pipe(sourcemaps.write('/'));
                 }
 
