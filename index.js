@@ -91,6 +91,9 @@ module.exports = function(config) {
                 task = task.pipe(gulp.dest(value.dest));
 
             }
+            else if ('copy' === value.type) {
+                task = task.pipe(gulp.dest(value.dest));
+            }
             
             if ('undefined' !== typeof value.copy) {
                 _.each(value.copy, function(path, name) {
